@@ -1,23 +1,9 @@
-# Hello world JavaScript action
+# CICD Lambda Demo
 
-This action prints "Hello World" or "Hello" + the name of a person to greet to the log. To learn how this action was built, see "[Creating a JavaScript action](https://help.github.com/en/articles/creating-a-javascript-action)" in the GitHub Help documentation.
+This is an example of deploying Lambda function with git actions and AWS cli.
+You can create the Lambda function initially with Terraform or AWS cli. Then any code change to the Lambda function is deployed automatically after the code is checked in.
 
-## Inputs
+## Assumptions
+You need an AWS account to deploy the Lambda function.
+You need to configure git actions with an IAM user and secret.
 
-### `who-to-greet`
-
-**Required** The name of the person to greet. Default `"World"`.
-
-## Outputs
-
-### `time`
-
-The time we greeted you.
-
-## Example usage
-
-```yaml
-uses: actions/hello-world-javascript-action@master
-with:
-  who-to-greet: 'Mona the Octocat'
-```
